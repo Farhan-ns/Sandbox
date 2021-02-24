@@ -1,11 +1,9 @@
 fun main(args: Array<String>) {
-    val greetingFunction = { playerName: String, numOfBuildings: Int ->
+    runSimulation("Hans") { playerName, buildings ->
         val currentYear = 2020
-        println("Adding $numOfBuildings  houses")
+        println("Adding $buildings  houses")
         "Welcome to SimVillage, Mayor $playerName! (Copyright $currentYear)"
     }
-
-    runSimulation("Hans", greetingFunction)
 }
 
 fun runSimulation(playerName: String, greetingFunction: (String, Int) -> String ) {
